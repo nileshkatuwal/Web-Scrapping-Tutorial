@@ -1,0 +1,727 @@
+/usr/bin/python2.7 /home/bahulakaji/PycharmProjects/WebScrapping/scrap.py
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="http://gmpg.org/xfn/11" rel="profile"/>
+  <link href="http://techprotricks.com/xmlrpc.php" rel="pingback"/>
+  <title>
+   TechProTricks – Technology Pro Tricks
+  </title>
+  <link href="//s0.wp.com" rel="dns-prefetch"/>
+  <link href="//s.gravatar.com" rel="dns-prefetch"/>
+  <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+  <link href="//s.w.org" rel="dns-prefetch"/>
+  <link href="http://techprotricks.com/index.php/feed/" rel="alternate" title="TechProTricks » Feed" type="application/rss+xml"/>
+  <link href="http://techprotricks.com/index.php/comments/feed/" rel="alternate" title="TechProTricks » Comments Feed" type="application/rss+xml"/>
+  <script type="text/javascript">
+   window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/techprotricks.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.1"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+  </script>
+  <style type="text/css">
+   img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+  </style>
+  <link href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C600&amp;ver=4.8.1" id="colormag_google_fonts-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://techprotricks.com/wp-content/themes/colormag/style.css?ver=4.8.1" id="colormag_style-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://techprotricks.com/wp-content/themes/colormag/fontawesome/css/font-awesome.css?ver=4.2.1" id="colormag-fontawesome-css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="http://techprotricks.com/wp-content/plugins/jetpack/css/jetpack.css?ver=5.7.1" id="jetpack_css-css" media="all" rel="stylesheet" type="text/css"/>
+  <script src="http://techprotricks.com/wp-includes/js/jquery/jquery.js?ver=1.12.4" type="text/javascript">
+  </script>
+  <script src="http://techprotricks.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" type="text/javascript">
+  </script>
+  <script src="http://techprotricks.com/wp-content/themes/colormag/js/colormag-custom.js?ver=4.8.1" type="text/javascript">
+  </script>
+  <!--[if lte IE 8]>
+<script type='text/javascript' src='http://techprotricks.com/wp-content/themes/colormag/js/html5shiv.min.js?ver=4.8.1'></script>
+<![endif]-->
+  <link href="http://techprotricks.com/index.php/wp-json/" rel="https://api.w.org/"/>
+  <link href="http://techprotricks.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+  <link href="http://techprotricks.com/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+  <meta content="WordPress 4.8.1" name="generator">
+   <link href="https://wp.me/9mYxo" rel="shortlink"/>
+   <link href="//v0.wordpress.com" rel="dns-prefetch"/>
+   <style type="text/css">
+    img#wpstats{display:none}
+   </style>
+   <style type="text/css">
+    .recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+   </style>
+   <style id="custom-background-css" type="text/css">
+    body.custom-background { background-color: #24e56e; }
+   </style>
+   <!-- Jetpack Open Graph Tags -->
+   <meta content="website" property="og:type"/>
+   <meta content="TechProTricks" property="og:title"/>
+   <meta content="Technology Pro Tricks" property="og:description"/>
+   <meta content="http://techprotricks.com/" property="og:url"/>
+   <meta content="TechProTricks" property="og:site_name"/>
+   <meta content="https://s0.wp.com/i/blank.jpg" property="og:image"/>
+   <meta content="en_US" property="og:locale"/>
+   <!-- TechProTricks Internal Styles -->
+   <style type="text/css">
+    .colormag-button,blockquote,button,input[type=reset],input[type=button],input[type=submit],#masthead.colormag-header-clean #site-navigation.main-small-navigation .menu-toggle{background-color:#2eeaac}#site-title a,.next a:hover,.previous a:hover,.social-links i.fa:hover,a,#masthead.colormag-header-clean .social-links li:hover i.fa,#masthead.colormag-header-classic .social-links li:hover i.fa,#masthead.colormag-header-clean .breaking-news .newsticker a:hover,#masthead.colormag-header-classic .breaking-news .newsticker a:hover,#masthead.colormag-header-classic #site-navigation .fa.search-top:hover,#masthead.colormag-header-classic #site-navigation.main-navigation .random-post a:hover .fa-random{color:#2eeaac}.fa.search-top:hover,#masthead.colormag-header-classic #site-navigation.main-small-navigation .menu-toggle{background-color:#2eeaac}#site-navigation{border-top:4px solid #2eeaac}.home-icon.front_page_on,.main-navigation a:hover,.main-navigation ul li ul li a:hover,.main-navigation ul li ul li:hover>a,.main-navigation ul li.current-menu-ancestor>a,.main-navigation ul li.current-menu-item ul li a:hover,.main-navigation ul li.current-menu-item>a,.main-navigation ul li.current_page_ancestor>a,.main-navigation ul li.current_page_item>a,.main-navigation ul li:hover>a,.main-small-navigation li a:hover,.site-header .menu-toggle:hover,#masthead.colormag-header-classic #site-navigation.main-navigation ul#menu-primary ul.sub-menu li:hover > a, #masthead.colormag-header-classic #site-navigation.main-navigation ul#menu-primary ul.sub-menu li.current-menu-ancestor > a, #masthead.colormag-header-classic #site-navigation.main-navigation ul#menu-primary ul.sub-menu li.current-menu-item > a,#masthead .main-small-navigation li:hover > a, #masthead .main-small-navigation li.current-page-ancestor > a, #masthead .main-small-navigation li.current-menu-ancestor > a, #masthead .main-small-navigation li.current-page-item > a, #masthead .main-small-navigation li.current-menu-item > a{background-color:#2eeaac}.main-small-navigation .current-menu-item>a,.main-small-navigation .current_page_item>a{background:#2eeaac}#masthead.colormag-header-classic #site-navigation.main-navigation ul#menu-primary > li:hover > a, #masthead.colormag-header-classic #site-navigation.main-navigation ul#menu-primary > li.current-menu-item > a, #masthead.colormag-header-classic #site-navigation.main-navigation ul#menu-primary > li.current-menu-ancestor > a,#masthead.colormag-header-classic #site-navigation.main-navigation ul#menu-primary ul.sub-menu li:hover, #masthead.colormag-header-classic #site-navigation.main-navigation ul#menu-primary ul.sub-menu li.current-menu-ancestor, #masthead.colormag-header-classic #site-navigation.main-navigation ul#menu-primary ul.sub-menu li.current-menu-item,#masthead.colormag-header-classic #site-navigation.main-small-navigation .menu-toggle,#masthead.colormag-header-classic #site-navigation .menu-toggle:hover{border-color:#2eeaac}.promo-button-area a:hover{border:2px solid #2eeaac;background-color:#2eeaac}#content .wp-pagenavi .current,#content .wp-pagenavi a:hover,.format-link .entry-content a,.pagination span{background-color:#2eeaac}.pagination a span:hover{color:#2eeaac;border-color:#2eeaac}#content .comments-area a.comment-edit-link:hover,#content .comments-area a.comment-permalink:hover,#content .comments-area article header cite a:hover,.comments-area .comment-author-link a:hover{color:#2eeaac}.comments-area .comment-author-link span{background-color:#2eeaac}.comment .comment-reply-link:hover,.nav-next a,.nav-previous a{color:#2eeaac}#secondary .widget-title{border-bottom:2px solid #2eeaac}#secondary .widget-title span{background-color:#2eeaac}.footer-widgets-area .widget-title{border-bottom:2px solid #2eeaac}.footer-widgets-area .widget-title span,.colormag-footer--classic .footer-widgets-area .widget-title span::before{background-color:#2eeaac}.footer-widgets-area a:hover{color:#2eeaac}.advertisement_above_footer .widget-title{border-bottom:2px solid #2eeaac}.advertisement_above_footer .widget-title span{background-color:#2eeaac}a#scroll-up i{color:#2eeaac}.page-header .page-title{border-bottom:2px solid #2eeaac}#content .post .article-content .above-entry-meta .cat-links a,.page-header .page-title span{background-color:#2eeaac}#content .post .article-content .entry-title a:hover,.entry-meta .byline i,.entry-meta .cat-links i,.entry-meta a,.post .entry-title a:hover,.search .entry-title a:hover{color:#2eeaac}.entry-meta .post-format i{background-color:#2eeaac}.entry-meta .comments-link a:hover,.entry-meta .edit-link a:hover,.entry-meta .posted-on a:hover,.entry-meta .tag-links a:hover,.single #content .tags a:hover{color:#2eeaac}.more-link,.no-post-thumbnail{background-color:#2eeaac}.post-box .entry-meta .cat-links a:hover,.post-box .entry-meta .posted-on a:hover,.post.post-box .entry-title a:hover{color:#2eeaac}.widget_featured_slider .slide-content .above-entry-meta .cat-links a{background-color:#2eeaac}.widget_featured_slider .slide-content .below-entry-meta .byline a:hover,.widget_featured_slider .slide-content .below-entry-meta .comments a:hover,.widget_featured_slider .slide-content .below-entry-meta .posted-on a:hover,.widget_featured_slider .slide-content .entry-title a:hover{color:#2eeaac}.widget_highlighted_posts .article-content .above-entry-meta .cat-links a{background-color:#2eeaac}.byline a:hover,.comments a:hover,.edit-link a:hover,.posted-on a:hover,.tag-links a:hover,.widget_highlighted_posts .article-content .below-entry-meta .byline a:hover,.widget_highlighted_posts .article-content .below-entry-meta .comments a:hover,.widget_highlighted_posts .article-content .below-entry-meta .posted-on a:hover,.widget_highlighted_posts .article-content .entry-title a:hover{color:#2eeaac}.widget_featured_posts .article-content .above-entry-meta .cat-links a{background-color:#2eeaac}.widget_featured_posts .article-content .entry-title a:hover{color:#2eeaac}.widget_featured_posts .widget-title{border-bottom:2px solid #2eeaac}.widget_featured_posts .widget-title span{background-color:#2eeaac}.related-posts-main-title .fa,.single-related-posts .article-content .entry-title a:hover{color:#2eeaac}@media (max-width: 768px) {.better-responsive-menu .sub-toggle{background-color:#10cc8e}}
+   </style>
+  </meta>
+ </head>
+ <body class="home blog custom-background wide better-responsive-menu">
+  <div class="hfeed site" id="page">
+   <header class="site-header clearfix " id="masthead">
+    <div class="clearfix" id="header-text-nav-container">
+     <div class="news-bar">
+      <div class="inner-wrap clearfix">
+       <div class="breaking-news">
+        <strong class="breaking-news-latest">
+         Latest:
+        </strong>
+        <ul class="newsticker">
+         <li>
+          <a href="http://techprotricks.com/index.php/2017/11/04/how-to-install-genymotion/" title="how to install genymotion">
+           how to install genymotion
+          </a>
+         </li>
+         <li>
+          <a href="http://techprotricks.com/index.php/2017/11/04/how-to-cahnge-colors-of-folders-in-windows-operating-system/" title="how to cahnge colors of folders in windows operating system.">
+           how to cahnge colors of folders in windows operating system.
+          </a>
+         </li>
+         <li>
+          <a href="http://techprotricks.com/index.php/2017/11/04/install-atom-in-ubuntu-17/" title="Install Atom in Ubuntu 17">
+           Install Atom in Ubuntu 17
+          </a>
+         </li>
+         <li>
+          <a href="http://techprotricks.com/index.php/2017/11/01/install-xampp-in-ubuntu/" title="Install Xampp in ubuntu 17">
+           Install Xampp in ubuntu 17
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div class="social-links clearfix">
+        <ul>
+        </ul>
+       </div>
+       <!-- .social-links -->
+      </div>
+     </div>
+     <div class="inner-wrap">
+      <div class="clearfix" id="header-text-nav-wrap">
+       <div id="header-left-section">
+        <div class="" id="header-text">
+         <h1 id="site-title">
+          <a href="http://techprotricks.com/" rel="home" title="TechProTricks">
+           TechProTricks
+          </a>
+         </h1>
+         <p id="site-description">
+          Technology Pro Tricks
+         </p>
+         <!-- #site-description -->
+        </div>
+        <!-- #header-text -->
+       </div>
+       <!-- #header-left-section -->
+       <div id="header-right-section">
+       </div>
+       <!-- #header-right-section -->
+      </div>
+      <!-- #header-text-nav-wrap -->
+     </div>
+     <!-- .inner-wrap -->
+     <nav class="main-navigation clearfix" id="site-navigation" role="navigation">
+      <div class="inner-wrap clearfix">
+       <h4 class="menu-toggle">
+       </h4>
+       <div class="menu-primary-container">
+        <ul class="menu" id="menu-menu-1">
+         <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-24" id="menu-item-24">
+          <a href="http://techprotricks.com/">
+           Home
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26" id="menu-item-26">
+          <a href="http://techprotricks.com/index.php/terms-and-conditions/">
+           Terms and Conditions
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25" id="menu-item-25">
+          <a href="http://techprotricks.com/index.php/about-us/">
+           About Us
+          </a>
+         </li>
+        </ul>
+       </div>
+       <i class="fa fa-search search-top">
+       </i>
+       <div class="search-form-top">
+        <form action="http://techprotricks.com/" class="search-form searchform clearfix" method="get">
+         <div class="search-wrap">
+          <input class="s field" name="s" placeholder="Search" type="text"/>
+          <button class="search-icon" type="submit">
+          </button>
+         </div>
+        </form>
+        <!-- .searchform -->
+       </div>
+      </div>
+     </nav>
+    </div>
+    <!-- #header-text-nav-container -->
+   </header>
+   <div class="clearfix" id="main">
+    <div class="inner-wrap clearfix">
+     <div class="front-page-top-section clearfix">
+      <div class="widget_slider_area">
+      </div>
+      <div class="widget_beside_slider">
+      </div>
+     </div>
+     <div class="main-content-section clearfix">
+      <div id="primary">
+       <div class="clearfix" id="content">
+        <div class="article-container">
+         <article class="post-41 post type-post status-publish format-aside hentry category-linux tag-android-emulator tag-debian tag-how-to tag-kali tag-linux post_format-post-format-aside" id="post-41">
+          <div class="article-content clearfix">
+           <div class="above-entry-meta">
+            <span class="cat-links">
+             <a href="http://techprotricks.com/index.php/category/linux/" rel="category tag">
+              Linux
+             </a>
+            </span>
+           </div>
+           <header class="entry-header">
+            <h2 class="entry-title">
+             <a href="http://techprotricks.com/index.php/2017/11/04/how-to-install-genymotion/" title="how to install genymotion">
+              how to install genymotion
+             </a>
+            </h2>
+           </header>
+           <div class="below-entry-meta">
+            <span class="posted-on">
+             <a href="http://techprotricks.com/index.php/2017/11/04/how-to-install-genymotion/" rel="bookmark" title="2:11 pm">
+              <i class="fa fa-calendar-o">
+              </i>
+              <time class="entry-date published" datetime="2017-11-04T14:11:59+00:00">
+               November 4, 2017
+              </time>
+              <time class="updated" datetime="2017-11-04T14:13:54+00:00">
+               November 4, 2017
+              </time>
+             </a>
+            </span>
+            <span class="byline">
+             <span class="author vcard">
+              <i class="fa fa-user">
+              </i>
+              <a class="url fn n" href="http://techprotricks.com/index.php/author/techprotricks/" title="techprotricks">
+               techprotricks
+              </a>
+             </span>
+            </span>
+            <span class="comments">
+             <a href="http://techprotricks.com/index.php/2017/11/04/how-to-install-genymotion/#respond">
+              <i class="fa fa-comment">
+              </i>
+              0 Comments
+             </a>
+            </span>
+            <span class="tag-links">
+             <i class="fa fa-tags">
+             </i>
+             <a href="http://techprotricks.com/index.php/tag/android-emulator/" rel="tag">
+              android emulator
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/debian/" rel="tag">
+              debian
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/how-to/" rel="tag">
+              how to
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/kali/" rel="tag">
+              kali
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/linux/" rel="tag">
+              linux
+             </a>
+            </span>
+           </div>
+           <div class="entry-content clearfix">
+            <p>
+             This tutorialshows you how to install genymotion 1. Download genymotion from https://www.genymotion.com/download/ 2. and watch the video and follow steps,
+            </p>
+            <a class="more-link" href="http://techprotricks.com/index.php/2017/11/04/how-to-install-genymotion/" title="how to install genymotion">
+             <span>
+              Read more
+             </span>
+            </a>
+           </div>
+          </div>
+         </article>
+         <article class="post-39 post type-post status-publish format-aside hentry category-tricks tag-colors tag-folders tag-how-to tag-tricks tag-trics tag-windows post_format-post-format-aside" id="post-39">
+          <div class="article-content clearfix">
+           <div class="above-entry-meta">
+            <span class="cat-links">
+             <a href="http://techprotricks.com/index.php/category/tricks/" rel="category tag">
+              Tricks
+             </a>
+            </span>
+           </div>
+           <header class="entry-header">
+            <h2 class="entry-title">
+             <a href="http://techprotricks.com/index.php/2017/11/04/how-to-cahnge-colors-of-folders-in-windows-operating-system/" title="how to cahnge colors of folders in windows operating system.">
+              how to cahnge colors of folders in windows operating system.
+             </a>
+            </h2>
+           </header>
+           <div class="below-entry-meta">
+            <span class="posted-on">
+             <a href="http://techprotricks.com/index.php/2017/11/04/how-to-cahnge-colors-of-folders-in-windows-operating-system/" rel="bookmark" title="1:55 pm">
+              <i class="fa fa-calendar-o">
+              </i>
+              <time class="entry-date published" datetime="2017-11-04T13:55:39+00:00">
+               November 4, 2017
+              </time>
+              <time class="updated" datetime="2017-11-04T13:57:37+00:00">
+               November 4, 2017
+              </time>
+             </a>
+            </span>
+            <span class="byline">
+             <span class="author vcard">
+              <i class="fa fa-user">
+              </i>
+              <a class="url fn n" href="http://techprotricks.com/index.php/author/techprotricks/" title="techprotricks">
+               techprotricks
+              </a>
+             </span>
+            </span>
+            <span class="comments">
+             <a href="http://techprotricks.com/index.php/2017/11/04/how-to-cahnge-colors-of-folders-in-windows-operating-system/#respond">
+              <i class="fa fa-comment">
+              </i>
+              0 Comments
+             </a>
+            </span>
+            <span class="tag-links">
+             <i class="fa fa-tags">
+             </i>
+             <a href="http://techprotricks.com/index.php/tag/colors/" rel="tag">
+              colors
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/folders/" rel="tag">
+              folders
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/how-to/" rel="tag">
+              how to
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/tricks/" rel="tag">
+              tricks
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/trics/" rel="tag">
+              trics
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/windows/" rel="tag">
+              windows
+             </a>
+            </span>
+           </div>
+           <div class="entry-content clearfix">
+            <p>
+             Tired of using same old folders with same colors??. Lets make your windows look more beautiful and intresting. This tutorial
+            </p>
+            <a class="more-link" href="http://techprotricks.com/index.php/2017/11/04/how-to-cahnge-colors-of-folders-in-windows-operating-system/" title="how to cahnge colors of folders in windows operating system.">
+             <span>
+              Read more
+             </span>
+            </a>
+           </div>
+          </div>
+         </article>
+         <article class="post-37 post type-post status-publish format-standard hentry category-linux tag-atom tag-development tag-how-to tag-install tag-ubuntu" id="post-37">
+          <div class="article-content clearfix">
+           <div class="above-entry-meta">
+            <span class="cat-links">
+             <a href="http://techprotricks.com/index.php/category/linux/" rel="category tag">
+              Linux
+             </a>
+            </span>
+           </div>
+           <header class="entry-header">
+            <h2 class="entry-title">
+             <a href="http://techprotricks.com/index.php/2017/11/04/install-atom-in-ubuntu-17/" title="Install Atom in Ubuntu 17">
+              Install Atom in Ubuntu 17
+             </a>
+            </h2>
+           </header>
+           <div class="below-entry-meta">
+            <span class="posted-on">
+             <a href="http://techprotricks.com/index.php/2017/11/04/install-atom-in-ubuntu-17/" rel="bookmark" title="1:49 pm">
+              <i class="fa fa-calendar-o">
+              </i>
+              <time class="entry-date published" datetime="2017-11-04T13:49:23+00:00">
+               November 4, 2017
+              </time>
+              <time class="updated" datetime="2017-11-04T13:58:18+00:00">
+               November 4, 2017
+              </time>
+             </a>
+            </span>
+            <span class="byline">
+             <span class="author vcard">
+              <i class="fa fa-user">
+              </i>
+              <a class="url fn n" href="http://techprotricks.com/index.php/author/techprotricks/" title="techprotricks">
+               techprotricks
+              </a>
+             </span>
+            </span>
+            <span class="comments">
+             <a href="http://techprotricks.com/index.php/2017/11/04/install-atom-in-ubuntu-17/#respond">
+              <i class="fa fa-comment">
+              </i>
+              0 Comments
+             </a>
+            </span>
+            <span class="tag-links">
+             <i class="fa fa-tags">
+             </i>
+             <a href="http://techprotricks.com/index.php/tag/atom/" rel="tag">
+              atom
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/development/" rel="tag">
+              development
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/how-to/" rel="tag">
+              how to
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/install/" rel="tag">
+              install
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/ubuntu/" rel="tag">
+              ubuntu
+             </a>
+            </span>
+           </div>
+           <div class="entry-content clearfix">
+            <p>
+             Atom is a free and open-source text and source code editor for macOS, Linux, and Microsoft Windows with support for plug-ins
+            </p>
+            <a class="more-link" href="http://techprotricks.com/index.php/2017/11/04/install-atom-in-ubuntu-17/" title="Install Atom in Ubuntu 17">
+             <span>
+              Read more
+             </span>
+            </a>
+           </div>
+          </div>
+         </article>
+         <article class="post-8 post type-post status-publish format-standard hentry category-linux tag-how-to tag-ubuntu tag-xampp" id="post-8">
+          <div class="article-content clearfix">
+           <div class="above-entry-meta">
+            <span class="cat-links">
+             <a href="http://techprotricks.com/index.php/category/linux/" rel="category tag">
+              Linux
+             </a>
+            </span>
+           </div>
+           <header class="entry-header">
+            <h2 class="entry-title">
+             <a href="http://techprotricks.com/index.php/2017/11/01/install-xampp-in-ubuntu/" title="Install Xampp in ubuntu 17">
+              Install Xampp in ubuntu 17
+             </a>
+            </h2>
+           </header>
+           <div class="below-entry-meta">
+            <span class="posted-on">
+             <a href="http://techprotricks.com/index.php/2017/11/01/install-xampp-in-ubuntu/" rel="bookmark" title="5:49 am">
+              <i class="fa fa-calendar-o">
+              </i>
+              <time class="entry-date published" datetime="2017-11-01T05:49:00+00:00">
+               November 1, 2017
+              </time>
+              <time class="updated" datetime="2017-11-04T13:58:34+00:00">
+               November 4, 2017
+              </time>
+             </a>
+            </span>
+            <span class="byline">
+             <span class="author vcard">
+              <i class="fa fa-user">
+              </i>
+              <a class="url fn n" href="http://techprotricks.com/index.php/author/techprotricks/" title="techprotricks">
+               techprotricks
+              </a>
+             </span>
+            </span>
+            <span class="comments">
+             <a href="http://techprotricks.com/index.php/2017/11/01/install-xampp-in-ubuntu/#respond">
+              <i class="fa fa-comment">
+              </i>
+              0 Comments
+             </a>
+            </span>
+            <span class="tag-links">
+             <i class="fa fa-tags">
+             </i>
+             <a href="http://techprotricks.com/index.php/tag/how-to/" rel="tag">
+              how to
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/ubuntu/" rel="tag">
+              ubuntu
+             </a>
+             ,
+             <a href="http://techprotricks.com/index.php/tag/xampp/" rel="tag">
+              xampp
+             </a>
+            </span>
+           </div>
+           <div class="entry-content clearfix">
+            <p>
+             XAMPP is a free and open source cross-platform web server solution stack package developed by Apache Friends, consisting mainly of
+            </p>
+            <a class="more-link" href="http://techprotricks.com/index.php/2017/11/01/install-xampp-in-ubuntu/" title="Install Xampp in ubuntu 17">
+             <span>
+              Read more
+             </span>
+            </a>
+           </div>
+          </div>
+         </article>
+        </div>
+       </div>
+      </div>
+      <div id="secondary">
+       <aside class="widget widget_recent_entries clearfix" id="recent-posts-4">
+        <h3 class="widget-title">
+         <span>
+          Recent
+         </span>
+        </h3>
+        <ul>
+         <li>
+          <a href="http://techprotricks.com/index.php/2017/11/04/how-to-install-genymotion/">
+           how to install genymotion
+          </a>
+         </li>
+         <li>
+          <a href="http://techprotricks.com/index.php/2017/11/04/how-to-cahnge-colors-of-folders-in-windows-operating-system/">
+           how to cahnge colors of folders in windows operating system.
+          </a>
+         </li>
+         <li>
+          <a href="http://techprotricks.com/index.php/2017/11/04/install-atom-in-ubuntu-17/">
+           Install Atom in Ubuntu 17
+          </a>
+         </li>
+         <li>
+          <a href="http://techprotricks.com/index.php/2017/11/01/install-xampp-in-ubuntu/">
+           Install Xampp in ubuntu 17
+          </a>
+         </li>
+        </ul>
+       </aside>
+       <aside class="widget widget_archive clearfix" id="archives-4">
+        <h3 class="widget-title">
+         <span>
+          Archives
+         </span>
+        </h3>
+        <label class="screen-reader-text" for="archives-dropdown-4">
+         Archives
+        </label>
+        <select id="archives-dropdown-4" name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+         <option value="">
+          Select Month
+         </option>
+         <option value="http://techprotricks.com/index.php/2017/11/">
+          November 2017
+         </option>
+        </select>
+       </aside>
+       <aside class="widget widget_categories clearfix" id="categories-4">
+        <h3 class="widget-title">
+         <span>
+          Categories
+         </span>
+        </h3>
+        <ul>
+         <li class="cat-item cat-item-16">
+          <a href="http://techprotricks.com/index.php/category/linux/">
+           Linux
+          </a>
+         </li>
+         <li class="cat-item cat-item-10">
+          <a href="http://techprotricks.com/index.php/category/tricks/">
+           Tricks
+          </a>
+         </li>
+        </ul>
+       </aside>
+       <aside class="widget_text widget widget_custom_html clearfix" id="custom_html-3">
+        <h3 class="widget-title">
+         <span>
+          Check out
+         </span>
+        </h3>
+        <div class="textwidget custom-html-widget">
+         <script async="true" src="https://m.easyaccess.mobi/rest/banners/js-display/6:aHR0cDovL3d3dy5iZXN0bW9iaWxlYXBwcy5tb2JpLz9zbD0yNTIyOTI5LTc0ZDdh/?data1=banner-promotion-tool&amp;data2=track2">
+         </script>
+        </div>
+       </aside>
+       <aside class="widget_text widget widget_custom_html clearfix" id="custom_html-5">
+        <h3 class="widget-title">
+         <span>
+          Advertisments
+         </span>
+        </h3>
+        <div class="textwidget custom-html-widget">
+         <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+         </script>
+         <!-- Techprotricks -->
+         <ins class="adsbygoogle" data-ad-client="ca-pub-3888667317301388" data-ad-format="auto" data-ad-slot="4781381259" style="display:block">
+         </ins>
+         <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+         </script>
+        </div>
+       </aside>
+      </div>
+     </div>
+    </div>
+    <!-- .inner-wrap -->
+   </div>
+   <!-- #main -->
+   <div class="advertisement_above_footer">
+    <div class="inner-wrap">
+     <aside class="widget_text widget widget_custom_html clearfix" id="custom_html-6">
+      <h3 class="widget-title">
+       <span>
+        Advertisments
+       </span>
+      </h3>
+      <div class="textwidget custom-html-widget">
+       <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+       </script>
+       <!-- Techprotricks -->
+       <ins class="adsbygoogle" data-ad-client="ca-pub-3888667317301388" data-ad-format="auto" data-ad-slot="4781381259" style="display:block">
+       </ins>
+       <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+       </script>
+      </div>
+     </aside>
+    </div>
+   </div>
+   <footer class="clearfix colormag-footer--classic" id="colophon">
+    <div class="footer-socket-wrapper clearfix">
+     <div class="inner-wrap">
+      <div class="footer-socket-area">
+       <div class="footer-socket-right-section">
+        <div class="social-links clearfix">
+         <ul>
+         </ul>
+        </div>
+        <!-- .social-links -->
+       </div>
+       <div class="footer-socket-left-section">
+        <div class="copyright">
+         Copyright © 2018
+         <a href="http://techprotricks.com/" title="TechProTricks">
+          <span>
+           TechProTricks
+          </span>
+         </a>
+         . All rights reserved.
+         <br/>
+         Theme: ColorMag by
+         <a href="https://themegrill.com/themes/colormag" rel="designer" target="_blank" title="ThemeGrill">
+          <span>
+           ThemeGrill
+          </span>
+         </a>
+         . Powered by
+         <a href="https://wordpress.org" target="_blank" title="WordPress">
+          <span>
+           WordPress
+          </span>
+         </a>
+         .
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+   <a href="#masthead" id="scroll-up">
+    <i class="fa fa-chevron-up">
+    </i>
+   </a>
+  </div>
+  <!-- #page -->
+  <div style="display:none">
+  </div>
+  <script src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201803" type="text/javascript">
+  </script>
+  <script src="http://s.gravatar.com/js/gprofiles.js?ver=2018Janaa" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+  </script>
+  <script src="http://techprotricks.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.8.1" type="text/javascript">
+  </script>
+  <script src="http://techprotricks.com/wp-content/themes/colormag/js/jquery.bxslider.min.js?ver=4.2.10" type="text/javascript">
+  </script>
+  <script src="http://techprotricks.com/wp-content/themes/colormag/js/colormag-slider-setting.js?ver=4.8.1" type="text/javascript">
+  </script>
+  <script src="http://techprotricks.com/wp-content/themes/colormag/js/navigation.js?ver=4.8.1" type="text/javascript">
+  </script>
+  <script src="http://techprotricks.com/wp-content/themes/colormag/js/news-ticker/jquery.newsTicker.min.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <script src="http://techprotricks.com/wp-content/themes/colormag/js/news-ticker/ticker-setting.js?ver=20150304" type="text/javascript">
+  </script>
+  <script src="http://techprotricks.com/wp-content/themes/colormag/js/fitvids/jquery.fitvids.js?ver=20150311" type="text/javascript">
+  </script>
+  <script src="http://techprotricks.com/wp-content/themes/colormag/js/fitvids/fitvids-setting.js?ver=20150311" type="text/javascript">
+  </script>
+  <script src="http://techprotricks.com/wp-content/themes/colormag/js/post-format.js?ver=20150422" type="text/javascript">
+  </script>
+  <script src="http://techprotricks.com/wp-includes/js/wp-embed.min.js?ver=4.8.1" type="text/javascript">
+  </script>
+  <script async="" defer="" src="https://stats.wp.com/e-201803.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   _stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:5.7.1',blog:'138462950',post:'0',tz:'0',srv:'techprotricks.com'} ]);
+	_stq.push([ 'clickTrackerInit', '138462950', '0' ]);
+  </script>
+ </body>
+</html>
+
+
+Process finished with exit code 0
